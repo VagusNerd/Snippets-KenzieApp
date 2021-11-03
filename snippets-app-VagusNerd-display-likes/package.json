@@ -1,0 +1,17 @@
+{
+  "name": "se-mern-social-media-app",
+  "version": "1.0.0",
+  "repository": "https://github.com/KenzieAcademy/se-mern-social-media-app.git",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  }
+}
